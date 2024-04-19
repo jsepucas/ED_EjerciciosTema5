@@ -25,6 +25,21 @@ public class ListaNumNaturalesGUI {
         panel.add(inputFieldD);
         panel.add(showListButton);
         panel.add(new JScrollPane(resultArea));
+
+        showListButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    int a = Integer.parseInt(inputFieldA.getText());
+                    int d = Integer.parseInt(inputFieldD.getText());
+                    resultArea.setText("Números entre " + a + " y " + d + ":\n");
+                    printNumbersRecursively(a, d, resultArea);
+                } catch (NumberFormatException ex) {
+                    resultArea.setText("Por favor, ingrese números válidos.");
+                }
+            }
+        });
+
     }
 
 
