@@ -14,6 +14,10 @@ public class SumaRecursivaNaturalesGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 200);
 
+        JTextField inputField = new JTextField(10);
+        JButton calculateButton = new JButton("Calcular Suma");
+        JLabel resultLabel = new JLabel("Resultado aparecerá aquí");
+
 
 
 
