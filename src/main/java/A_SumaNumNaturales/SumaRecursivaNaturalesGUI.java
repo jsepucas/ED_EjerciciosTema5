@@ -2,11 +2,14 @@ package A_SumaNumNaturales;
 
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
 public class SumaRecursivaNaturalesGUI {
+
+    private static Component panel;
 
     public static void main(String[] args) {
 
@@ -31,7 +34,7 @@ public class SumaRecursivaNaturalesGUI {
             }
         });
 
-        // Agregar el panel al frame y hacerlo visible
+
         frame.getContentPane().add(panel);
         frame.setVisible(true);
     }
@@ -40,4 +43,3 @@ public class SumaRecursivaNaturalesGUI {
 
 
 
-    }
