@@ -1,15 +1,10 @@
 package A_SumaNumNaturales;
 
-
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
 public class SumaRecursivaNaturalesGUI {
-
-    private static Component panel;
 
     public static void main(String[] args) {
 
@@ -17,9 +12,16 @@ public class SumaRecursivaNaturalesGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 200);
 
+
         JTextField inputField = new JTextField(10);
         JButton calculateButton = new JButton("Calcular Suma");
         JLabel resultLabel = new JLabel("Resultado aparecerá aquí");
+
+        JPanel panel = new JPanel();
+        panel.add(new JLabel("Ingrese n:"));
+        panel.add(inputField);
+        panel.add(calculateButton);
+        panel.add(resultLabel);
 
         calculateButton.addActionListener(new ActionListener() {
             @Override
@@ -34,12 +36,7 @@ public class SumaRecursivaNaturalesGUI {
             }
         });
 
-
         frame.getContentPane().add(panel);
         frame.setVisible(true);
     }
 }
-
-
-
-
