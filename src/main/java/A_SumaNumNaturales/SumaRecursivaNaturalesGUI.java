@@ -18,6 +18,25 @@ public class SumaRecursivaNaturalesGUI {
         JButton calculateButton = new JButton("Calcular Suma");
         JLabel resultLabel = new JLabel("Resultado aparecerá aquí");
 
+        calculateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    int n = Integer.parseInt(inputField.getText());
+                    int resultado = SumaRecursivaNaturales.sumaRecursiva(n);
+                    resultLabel.setText("Suma de los primeros " + n + " números: " + resultado);
+                } catch (NumberFormatException ex) {
+                    resultLabel.setText("Por favor, ingrese un número válido.");
+                }
+            }
+        });
+
+        // Agregar el panel al frame y hacerlo visible
+        frame.getContentPane().add(panel);
+        frame.setVisible(true);
+    }
+}
+
 
 
 
