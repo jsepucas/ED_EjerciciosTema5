@@ -9,7 +9,7 @@ public class SumaRecursivaNaturalesGUI {
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("Suma Recursiva de Números Naturales");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(400, 200);
 
 
@@ -18,7 +18,7 @@ public class SumaRecursivaNaturalesGUI {
         JLabel resultLabel = new JLabel("Resultado aparecerá aquí");
 
         JPanel panel = new JPanel();
-        panel.add(new JLabel("Ingrese n:"));
+        panel.add(new JLabel("Ingrese el n:"));
         panel.add(inputField);
         panel.add(calculateButton);
         panel.add(resultLabel);
@@ -37,6 +37,8 @@ public class SumaRecursivaNaturalesGUI {
         });
 
         frame.getContentPane().add(panel);
+        frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 }
