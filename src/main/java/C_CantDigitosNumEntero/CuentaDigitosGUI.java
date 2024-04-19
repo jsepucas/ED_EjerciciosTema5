@@ -25,5 +25,20 @@ public class CuentaDigitosGUI {
         panel.add(resultLabel);
 
 
+        calculateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    int numero = Integer.parseInt(inputField.getText());
+                    int resultado = contarDigitos(numero);
+                    resultLabel.setText("El número " + numero + " tiene " + resultado + " dígitos.");
+                } catch (NumberFormatException ex) {
+                    resultLabel.setText("Por favor, ingrese un número válido.");
+                }
+            }
+        });
+
+
+
 
     }
