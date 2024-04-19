@@ -18,5 +18,12 @@ public class CuentaDigitosGUI {
         JButton calculateButton = new JButton("Contar Dígitos");
         JLabel resultLabel = new JLabel("El resultado aparecerá aquí");
 
+        JPanel panel = new JPanel();
+        panel.add(new JLabel("Ingrese un número:"));
+        panel.add(inputField);
+        panel.add(calculateButton);
+        panel.add(resultLabel);
 
-}
+
+
+    }
