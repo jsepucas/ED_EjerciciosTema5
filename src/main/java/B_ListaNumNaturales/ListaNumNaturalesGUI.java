@@ -40,8 +40,17 @@ public class ListaNumNaturalesGUI {
             }
         });
 
-
+        frame.getContentPane().add(panel);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+    private static void printNumbersRecursively(int a, int d, JTextArea resultArea) {
+        if (a <= d) {
+            resultArea.append(a + " ");
+            printNumbersRecursively(a + 1, d, resultArea);
+        }
+    }
     }
 
 
-    }
+
