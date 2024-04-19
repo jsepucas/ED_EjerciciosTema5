@@ -17,6 +17,14 @@ public class ListaNumNaturalesGUI {
         JButton showListButton = new JButton("Mostrar Lista");
         JTextArea resultArea = new JTextArea(5, 20);
         resultArea.setEditable(false);
+
+        JPanel panel = new JPanel();
+        panel.add(new JLabel("Ingrese valor inicial (a):"));
+        panel.add(inputFieldA);
+        panel.add(new JLabel("Ingrese valor final (d):"));
+        panel.add(inputFieldD);
+        panel.add(showListButton);
+        panel.add(new JScrollPane(resultArea));
     }
 
 
