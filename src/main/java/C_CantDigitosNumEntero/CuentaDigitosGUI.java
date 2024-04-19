@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static C_CantDigitosNumEntero.CuentaDigitos.contarDigitos;
+
 public class CuentaDigitosGUI {
 
     public static void main(String[] args) {
@@ -37,6 +39,16 @@ public class CuentaDigitosGUI {
                 }
             }
         });
+
+        frame.getContentPane().add(panel);
+
+
+        frame.setLocationRelativeTo(null);
+
+
+        frame.setVisible(true);
+    }
+
 
 
 
