@@ -9,7 +9,7 @@ public class ListaNumNaturalesGUI {
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("Lista de Números Naturales entre dos Valores");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(500, 200);
 
         JTextField inputFieldA = new JTextField(5);

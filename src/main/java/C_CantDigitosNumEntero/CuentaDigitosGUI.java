@@ -12,7 +12,7 @@ public class CuentaDigitosGUI {
 
 
         JFrame frame = new JFrame("Contador de Dígitos de un Número Entero");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(400, 200);
 
 
@@ -48,9 +48,4 @@ public class CuentaDigitosGUI {
 
         frame.setVisible(true);
     }
-
-
-
-
-
     }
