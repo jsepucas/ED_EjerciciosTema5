@@ -13,7 +13,7 @@ public class OrdenadorDeFicherosGUI {
 
 
         JFrame frame = new JFrame("Ordenador de Ficheros");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(400, 150);
 
         JButton selectButton = new JButton("Seleccionar Archivo");

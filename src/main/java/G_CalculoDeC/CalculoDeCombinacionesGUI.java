@@ -11,7 +11,7 @@ public class CalculoDeCombinacionesGUI {
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("Cálculo de Combinaciones C(n, k)");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(500, 200);
 
         JTextField inputFieldN = new JTextField(5);

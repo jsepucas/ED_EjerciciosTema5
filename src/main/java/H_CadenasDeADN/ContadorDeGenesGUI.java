@@ -10,7 +10,7 @@ public class ContadorDeGenesGUI {
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("Contador de Genes en ADN");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(600, 300);
 
         JTextField inputField = new JTextField(5);

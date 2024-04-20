@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class ValorMaximoGUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Valor Máximo en un Vector");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(500, 300);
 
         JTextField inputField = new JTextField(20);

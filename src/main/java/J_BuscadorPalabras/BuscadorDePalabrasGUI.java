@@ -14,7 +14,7 @@ public class BuscadorDePalabrasGUI {
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("Buscador de Palabras con Búsqueda Binaria");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(600, 300);
 
         JButton selectButton = new JButton("Seleccionar Archivo ");
