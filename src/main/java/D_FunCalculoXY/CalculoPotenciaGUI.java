@@ -17,5 +17,14 @@ public class CalculoPotenciaGUI {
         JButton calculateButton = new JButton("Calcular Potencia");
         JLabel resultLabel = new JLabel("El resultado aparecerá aquí");
 
+        JPanel panel = new JPanel();
+        panel.add(new JLabel("Ingrese base (x):"));
+        panel.add(inputFieldX);
+        panel.add(new JLabel("Ingrese exponente (y):"));
+        panel.add(inputFieldY);
+        panel.add(calculateButton);
+        panel.add(resultLabel);
 
-}
+
+
+    }
