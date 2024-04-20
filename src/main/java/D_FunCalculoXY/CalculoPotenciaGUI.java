@@ -25,6 +25,20 @@ public class CalculoPotenciaGUI {
         panel.add(calculateButton);
         panel.add(resultLabel);
 
+        calculateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    int x = Integer.parseInt(inputFieldX.getText());
+                    int y = Integer.parseInt(inputFieldY.getText());
+                    int resultado = calcularPotencia(x, y);
+                    resultLabel.setText(x + " elevado a " + y + " es " + resultado);
+                } catch (NumberFormatException ex) {
+                    resultLabel.setText("Por favor, ingrese números enteros válidos.");
+                }
+            }
+        });
+
 
 
     }
