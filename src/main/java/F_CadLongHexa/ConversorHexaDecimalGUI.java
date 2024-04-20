@@ -21,4 +21,17 @@ public class ConversorHexaDecimalGUI {
         panel.add(inputField);
         panel.add(convertButton);
         panel.add(resultLabel);
+
+        convertButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    String hex = inputField.getText().toUpperCase();
+                    int resultado = hexaADecimal(hex, hex.length());
+                    resultLabel.setText("Valor decimal: " + resultado);
+                } catch (NumberFormatException ex) {
+                    resultLabel.setText("Por favor, ingrese un número hexadecimal válido.");
+                }
+            }
+        });
 }
