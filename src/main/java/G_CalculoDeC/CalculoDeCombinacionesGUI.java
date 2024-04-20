@@ -48,7 +48,7 @@ public class CalculoDeCombinacionesGUI {
 
         frame.setLocationRelativeTo(null);
 
-        // Hacer el frame visible
+
         frame.setVisible(true);
     }
     }
