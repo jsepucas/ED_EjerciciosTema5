@@ -12,4 +12,14 @@ public class ContadorDeGenes {
         }
         return sb.toString();
     }
+
+    public static int contarGenes(String cadena) {
+        int cuenta = 0;
+        int index = cadena.indexOf("ATG");
+        while (index != -1) {
+            cuenta++;
+            index = cadena.indexOf("ATG", index + 3); // Buscar el próximo ATG después del actual
+        }
+        return cuenta;
+    }
 }
