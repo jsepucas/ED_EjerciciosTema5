@@ -1,10 +1,11 @@
 package E_ValorMaxVector;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 public class ValorMaximoGUI {
     public static void main(String[] args) {
-
         JFrame frame = new JFrame("Valor Máximo en un Vector");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 300);
@@ -36,4 +37,22 @@ public class ValorMaximoGUI {
             }
         });
 
+        frame.getContentPane().add(panel);
+
+        frame.setLocationRelativeTo(null);
+
+        frame.setVisible(true);
     }
+
+
+    private static int encontrarMaximo(int[] vector, int indice, int maximo) {
+        if (indice == vector.length) {
+            return maximo;
+        } else {
+            if (vector[indice] > maximo) {
+                maximo = vector[indice];
+            }
+            return encontrarMaximo(vector, indice + 1, maximo);
+        }
+    }
+}
