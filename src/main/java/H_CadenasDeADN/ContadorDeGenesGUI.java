@@ -19,6 +19,19 @@ public class ContadorDeGenesGUI {
         panel.add(inputField);
         panel.add(generateButton);
         panel.add(new JScrollPane(resultArea));
+        generateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    int longitud = Integer.parseInt(inputField.getText());
+                    String cadenaADN = generarCadenaADN(longitud);
+                    int numGenes = contarGenes(cadenaADN);
+                    resultArea.setText("Cadena de ADN: " + cadenaADN + "\nNúmero de genes (tripletas ATG): " + numGenes);
+                } catch (NumberFormatException ex) {
+                    resultArea.setText("Por favor, ingrese un número válido.");
+                }
+            }
+        });
 
 
 
