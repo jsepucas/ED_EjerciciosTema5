@@ -2,6 +2,10 @@ package H_CadenasDeADN;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import static H_CadenasDeADN.ContadorDeGenes.contarGenes;
+import static H_CadenasDeADN.ContadorDeGenes.generarCadenaADN;
+
 public class ContadorDeGenesGUI {
     public static void main(String[] args) {
 
@@ -32,6 +36,8 @@ public class ContadorDeGenesGUI {
                 }
             }
         });
+
+
 
 
 
