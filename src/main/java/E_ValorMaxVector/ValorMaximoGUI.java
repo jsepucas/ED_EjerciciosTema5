@@ -19,4 +19,21 @@ public class ValorMaximoGUI {
         panel.add(findMaxButton);
         panel.add(resultLabel);
 
+        findMaxButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    String[] parts = inputField.getText().split(",");
+                    int[] vector = new int[parts.length];
+                    for (int i = 0; i < parts.length; i++) {
+                        vector[i] = Integer.parseInt(parts[i].trim());
+                    }
+                    int maximo = encontrarMaximo(vector, 0, Integer.MIN_VALUE);
+                    resultLabel.setText("El valor máximo en el vector es: " + maximo);
+                } catch (NumberFormatException ex) {
+                    resultLabel.setText("Por favor, ingrese números válidos separados por comas.");
+                }
+            }
+        });
+
     }
