@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static F_CadLongHexa.ConversorHexaDecimal.hexaADecimal;
+
 public class ConversorHexaDecimalGUI {
 
     public static void main(String[] args) {
@@ -34,4 +36,10 @@ public class ConversorHexaDecimalGUI {
                 }
             }
         });
+        frame.getContentPane().add(panel);
+
+        frame.setLocationRelativeTo(null);
+
+        frame.setVisible(true);
+    }
 }
