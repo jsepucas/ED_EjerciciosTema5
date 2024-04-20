@@ -38,8 +38,13 @@ public class ContadorDeGenesGUI {
         });
 
 
+        frame.getContentPane().add(panel);
 
+        frame.setLocationRelativeTo(null);
 
-
+        frame.setVisible(true);
 
     }
+}
+
+
