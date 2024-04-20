@@ -7,7 +7,7 @@ public class BuscadorDePalabras {
 
 
     public static File prepararArchivoParaBusqueda(String archivo) throws IOException {
-        File archivoOrdenado = new File("temp.txt");
+        File archivoOrdenado = new File("ordenado_" + new File(archivo).getName());
         List<String> palabras = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(archivo))) {

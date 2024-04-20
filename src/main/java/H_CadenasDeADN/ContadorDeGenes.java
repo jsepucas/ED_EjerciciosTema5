@@ -18,13 +18,13 @@ public class ContadorDeGenes {
         int index = cadena.indexOf("ATG");
         while (index != -1) {
             cuenta++;
-            index = cadena.indexOf("ATG", index + 3); // Buscar el próximo ATG después del actual
+            index = cadena.indexOf("ATG", index + 3);
         }
         return cuenta;
     }
 
     public static void main(String[] args) {
-        String cadenaADN = generarCadenaADN(100); // Generar una cadena de ADN de 100 bases
+        String cadenaADN = generarCadenaADN(100);
         System.out.println("Cadena de ADN: " + cadenaADN);
         int numGenes = contarGenes(cadenaADN);
         System.out.println("Número de genes (tripletas ATG) en la cadena: " + numGenes);
