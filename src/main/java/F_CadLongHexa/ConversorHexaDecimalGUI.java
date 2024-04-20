@@ -15,4 +15,10 @@ public class ConversorHexaDecimalGUI {
         JTextField inputField = new JTextField(10);
         JButton convertButton = new JButton("Convertir a Decimal");
         JLabel resultLabel = new JLabel("El resultado aparecerá aquí");
+
+        JPanel panel = new JPanel();
+        panel.add(new JLabel("Ingrese el número hexadecimal:"));
+        panel.add(inputField);
+        panel.add(convertButton);
+        panel.add(resultLabel);
 }
