@@ -22,4 +22,12 @@ public class ContadorDeGenes {
         }
         return cuenta;
     }
+
+    public static void main(String[] args) {
+        String cadenaADN = generarCadenaADN(100); // Generar una cadena de ADN de 100 bases
+        System.out.println("Cadena de ADN: " + cadenaADN);
+        int numGenes = contarGenes(cadenaADN);
+        System.out.println("Número de genes (tripletas ATG) en la cadena: " + numGenes);
+    }
+
 }
