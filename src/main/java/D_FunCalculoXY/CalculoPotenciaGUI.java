@@ -3,6 +3,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static D_FunCalculoXY.CalculoPotencia.calcularPotencia;
+
 
 public class CalculoPotenciaGUI {
 
@@ -39,6 +41,11 @@ public class CalculoPotenciaGUI {
             }
         });
 
+        frame.getContentPane().add(panel);
 
+        frame.setLocationRelativeTo(null);
+
+        frame.setVisible(true);
+    }
 
     }
