@@ -1,32 +1,44 @@
 package J_BuscadorPalabras;
 
 import java.io.*;
+import java.util.*;
 
 public class BuscadorDePalabras {
 
 
-    public static boolean buscarPalabra(String archivo, String palabraBuscada) {
+    public static File prepararArchivoParaBusqueda(String archivo) throws IOException {
+        File archivoOrdenado = new File("temp.txt");
+        List<String> palabras = new ArrayList<>();
+
         try (BufferedReader reader = new BufferedReader(new FileReader(archivo))) {
             String linea;
             while ((linea = reader.readLine()) != null) {
 
-                String[] palabras = linea.split("\\W+");
-                for (String palabra : palabras) {
-                    if (palabra.equalsIgnoreCase(palabraBuscada)) {
-                        return true;
-                    }
-                }
+                String[] partes = linea.split("\\W+");
+                palabras.addAll(Arrays.asList(partes));
             }
-        } catch (IOException e) {
-            System.out.println("Error al leer el archivo: " + e.getMessage());
         }
-        return false;
+        Collections.sort(palabras);
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivoOrdenado))) {
+            for (String palabra : palabras) {
+                writer.write(palabra);
+                writer.newLine();
+            }
+        }
+        return archivoOrdenado;
     }
 
-    public static void main(String[] args) {
-        String archivo = "ejemplo.txt";
-        String palabraBuscada = "ejemplo";
-        boolean encontrada = buscarPalabra(archivo, palabraBuscada);
-        System.out.println("La palabra '" + palabraBuscada + "' fue " + (encontrada ? "encontrada." : "no encontrada."));
+
+    public static boolean buscarPalabraConBinaria(File archivo, String palabraBuscada) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(archivo))) {
+            List<String> palabras = new ArrayList<>();
+            String linea;
+            while ((linea = reader.readLine()) != null) {
+                palabras.add(linea);
+            }
+            int resultado = Collections.binarySearch(palabras, palabraBuscada, String.CASE_INSENSITIVE_ORDER);
+            return resultado >= 0;
+        }
     }
 }
