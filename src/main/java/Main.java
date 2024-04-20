@@ -17,39 +17,43 @@ public class Main {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Aplicación de ejercicios de la UAX \uD83D\uDE03");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 500);
+        frame.setSize(900, 900);
         frame.setLayout(new BorderLayout());
 
         JPanel mainPanel = new JPanel(new BorderLayout(150, 140));
-        mainPanel.setPreferredSize(new Dimension(990, 700));
+        mainPanel.setPreferredSize(new Dimension(1000, 800));
 
         // Declarar e inicializar topPanel, bottomPanel y decoracion
         JPanel topPanel = new JPanel(new BorderLayout());
         JPanel bottomPanel = new JPanel(new GridLayout(5, 5, 20, 20)); // 2 filas, 5 columnas
+        //centrar botones
+        bottomPanel.setAlignmentX(Component.BOTTOM_ALIGNMENT);
+        bottomPanel.setAlignmentY(Component.RIGHT_ALIGNMENT);
 
 
-        JLabel decoracion = new JLabel(new ImageIcon("src/main/resources/logo.png"));
+
+        JLabel decoracion = new JLabel(new ImageIcon("src/main/resources/logo2.png"));
         topPanel.add(decoracion, BorderLayout.NORTH);
 
 
-        mainPanel.setBackground(new Color(3, 66, 118));
-        topPanel.setBackground(new Color(3, 66, 118));
-        bottomPanel.setBackground(new Color(3, 66, 118));
+        mainPanel.setBackground(new Color(0,69,124,255));
+        topPanel.setBackground(new Color(0,69,124,255));
+        bottomPanel.setBackground(new Color(0,69,124,255));
 
 
 
 
-        JButton sumaButton = new JButton("Suma de Números Naturales");
-        JButton listaButton = new JButton("Lista de Números Naturales");
-        JButton digitosButton = new JButton("Contador de Dígitos");
-        JButton ValorMaxButton = new JButton("Valor Máximo de un vector"); //e
-        JButton potenciaButton = new JButton("Cálculo de Potencia");
-        JButton ConversorButton = new JButton("Conversor de Bases ");
-        JButton CalculoCombinacionesButton = new JButton("Cálculo de Combinaciones");
-        JButton genesButton = new JButton("Contador de Genes");
-        JButton ordenarButton = new JButton("Ordenador de Ficheros");
-        JButton palabrasButton = new JButton("Buscador de Palabras");
-        JButton fechaButton = new JButton("Gestor de Fechas");
+        JButton sumaButton = new JButton("Suma de Números Naturales  ➕ ");
+        JButton listaButton = new JButton("Lista de Números Naturales  \uD83D\uDCC3 ");
+        JButton digitosButton = new JButton("Contador de Dígitos  0\uFE0F⃣    1\uFE0F⃣    2\uFE0F⃣    3\uFE0F⃣");
+        JButton ValorMaxButton = new JButton("Valor Máximo de un vector  ⬆\uFE0F "); //e
+        JButton potenciaButton = new JButton("Cálculo de Potencia \uD83D\uDD8A\uFE0F ");
+        JButton ConversorButton = new JButton("Conversor de Bases  \uD83D\uDCDC ");
+        JButton CalculoCombinacionesButton = new JButton("Cálculo de Combinaciones \uD83D\uDCC4");
+        JButton genesButton = new JButton("Contador de Genes \uD83D\uDC9A");
+        JButton ordenarButton = new JButton("Ordenador de Ficheros \uD83D\uDCC3");
+        JButton palabrasButton = new JButton("Buscador de Palabras \uD83D\uDD0E");
+        JButton fechaButton = new JButton("Gestor de Fechas \uD83D\uDCC6");
 
         sumaButton.addActionListener(e -> SumaRecursivaNaturalesGUI.main(new String[]{}));
         listaButton.addActionListener(e -> ListaNumNaturalesGUI.main(new String[]{}));
