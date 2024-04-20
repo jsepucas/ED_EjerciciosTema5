@@ -1,5 +1,13 @@
 package J_BuscadorPalabras;
 
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+
+import static J_BuscadorPalabras.BuscadorDePalabras.buscarPalabra;
+
+
 public class BuscadorDePalabrasGUI {
     public static void main(String[] args) {
 
