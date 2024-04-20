@@ -5,6 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
+import static I_OrdenFichero.OrdenadorDeFicheros.ordenarFichero;
+
 public class OrdenadorDeFicherosGUI {
 
     public static void main(String[] args) {
@@ -36,5 +38,29 @@ public class OrdenadorDeFicherosGUI {
                 }
             }
         });
+
+        orderButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser fileChooser = new JFileChooser();
+                fileChooser.setDialogTitle("Guardar archivo ordenado como...");
+                int userSelection = fileChooser.showSaveDialog(frame);
+                if (userSelection == JFileChooser.APPROVE_OPTION) {
+                    File archivoParaGuardar = fileChooser.getSelectedFile();
+                    ordenarFichero(fileLabel.getText(), archivoParaGuardar.getAbsolutePath());
+                    JOptionPane.showMessageDialog(frame, "Archivo ordenado y guardado con éxito.");
+                }
+            }
+        });
+
+
+        frame.getContentPane().add(panel);
+
+
+        frame.setLocationRelativeTo(null);
+
+
+        frame.setVisible(true);
+    }
 
     }
